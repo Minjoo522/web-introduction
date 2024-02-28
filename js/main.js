@@ -50,11 +50,11 @@ function makeMovieLists(movies) {
 
 function makeMovieList({ rank, title, poster, description, url }) {
   return `<tr>
-  <td>${rank}</td>
-  <td>${title}</td>
-  <td><img src="${poster}" alt="${title} 포스터" class="movie-poster" /></td>
-  <td>${description}</td>
-  <td><a href="${url}">클릭</a></td>
+  <td><span class="movie-rank">${rank}</span></td>
+  <td><span class="movie-title">${title}</span></td>
+  <td class="movie-poster__table"><img src="${poster}" alt="${title} 포스터" class="movie-poster" /></td>
+  <td class="movie-description">${description}</td>
+  <td><a href="${url}" class="movie-url">클릭</a></td>
 </tr>`;
 }
 
