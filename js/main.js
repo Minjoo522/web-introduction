@@ -41,11 +41,10 @@ const movies = [
   },
 ];
 
-const my_movies = document.querySelector('.my-movies');
-
 function makeMovieLists(movies) {
+  const myMovies = document.querySelector('.my-movies');
   const sortedMovies = movies.sort((a, b) => a.rank - b.rank);
-  my_movies.innerHTML = sortedMovies.map(makeMovieList).join('');
+  myMovies.innerHTML = sortedMovies.map(makeMovieList).join('');
 }
 
 function makeMovieList({ rank, title, poster, description, url }) {
@@ -60,11 +59,10 @@ function makeMovieList({ rank, title, poster, description, url }) {
 
 makeMovieLists(movies);
 
-const friend_movies = document.querySelector('.friend-movies');
-
 function makeMovieCheckBoxes(movies) {
+  const friendMovies = document.querySelector('.friend-movies');
   const movie_names = movies.map((movie) => movie.title);
-  friend_movies.innerHTML = movie_names.map(makeMovieCheckBox).join('');
+  friendMovies.innerHTML = movie_names.map(makeMovieCheckBox).join('');
 }
 
 function makeMovieCheckBox(title) {
@@ -75,12 +73,12 @@ function makeMovieCheckBox(title) {
 makeMovieCheckBoxes(movies);
 
 function alertSameFavoriteMovieCount() {
-  const friend_name = document.querySelector('.friend-name').value;
+  const friendName = document.querySelector('.friend-name').value;
   const checkboxes = Array.from(document.querySelectorAll('.movie__checkbox'));
   const selectedCount = checkboxes.filter((checkbox) => checkbox.checked).length;
-  alert(`${friend_name}님, 저와 ${selectedCount}개의 취향이 같으시네요!`);
+  alert(`${friendName}님, 저와 ${selectedCount}개의 취향이 같으시네요!`);
 }
 
-const register_button = document.querySelector('.register__button');
+const registerButton = document.querySelector('.register__button');
 
-register_button.addEventListener('click', alertSameFavoriteMovieCount);
+registerButton.addEventListener('click', alertSameFavoriteMovieCount);
