@@ -65,6 +65,13 @@ th {
   font-size: 20px;
 }
 
+/* Header */
+.header {
+  margin: 5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
 /* 인생 영화 */
 .my-movies__section {
   padding: 2rem;
