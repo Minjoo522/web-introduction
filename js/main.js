@@ -59,3 +59,17 @@ function makeMovieList({ rank, title, poster, description, url }) {
 }
 
 makeMovieLists(movies);
+
+const friend_movies = document.querySelector('.friend-movies');
+
+function makeMovieCheckBoxes(movies) {
+  const movie_names = movies.map((movie) => movie.title);
+  friend_movies.innerHTML = movie_names.map(makeMovieCheckBox).join('');
+}
+
+function makeMovieCheckBox(title) {
+  return `<input type="checkbox" id="movie">
+  <label for="movie">${title}</label>`;
+}
+
+makeMovieCheckBoxes(movies);
