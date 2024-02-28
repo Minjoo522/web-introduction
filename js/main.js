@@ -68,8 +68,19 @@ function makeMovieCheckBoxes(movies) {
 }
 
 function makeMovieCheckBox(title) {
-  return `<input type="checkbox" id="movie">
+  return `<input type="checkbox" id="movie" class="movie__checkbox">
   <label for="movie">${title}</label>`;
 }
 
 makeMovieCheckBoxes(movies);
+
+function alertSameFavoriteMovieCount() {
+  const friend_name = document.querySelector('.friend-name').value;
+  const checkboxes = Array.from(document.querySelectorAll('.movie__checkbox'));
+  const selectedCount = checkboxes.filter((checkbox) => checkbox.checked).length;
+  alert(`${friend_name}님, 저와 ${selectedCount}개의 취향이 같으시네요!`);
+}
+
+const register_button = document.querySelector('.register__button');
+
+register_button.addEventListener('click', alertSameFavoriteMovieCount);
