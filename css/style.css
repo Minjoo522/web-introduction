@@ -17,6 +17,8 @@
 
 * {
   box-sizing: border-box;
+  color: var(--color-text);
+  background-color: var(--color-primary);
 }
 
 body {
@@ -38,7 +40,6 @@ ul {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 button {
@@ -72,13 +73,44 @@ th {
   font-size: 2rem;
 }
 
+/* Introduction */
+.introduction__section {
+  margin: 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.introduction__title {
+  margin-bottom: 2rem;
+}
+
+.my-name {
+  display: inline-block;
+  width: 55px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  background-color: var(--color-accent);
+}
+
+.introduction__list {
+  margin-bottom: 1.5rem;
+}
+
+.introduction__description {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
 /* 인생 영화 */
 .my-movies__section {
+  background-color: var(--color-primary-variant);
   padding: 2rem;
   text-align: center;
 }
 
 .my-movies__title {
+  background-color: var(--color-primary-variant);
   font-size: 2.5rem;
   position: relative;
 }
