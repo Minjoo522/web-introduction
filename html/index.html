@@ -36,12 +36,14 @@
         <tbody class="my-movies"></tbody>
       </table>
     </div>
-    <div>
-      <form action="get">
-        <h2>방명록</h2>
-        <label for="name">이름 : </label>
-        <input type="text" name="name" class="friend-name" />
-        <p>본인 취향 영화</p>
+    <div class="visitor-book__section">
+      <h2 class="visitor-book__title">🩷 방명록 🩷</h2>
+      <form action="get" class="visitor-book__form">
+        <div class="visitor-book-name">
+          <label for="name">이름 : </label>
+          <input type="text" name="name" class="friend-name" />
+        </div>
+        <h3 freind-movies__title">본인 취향 영화</h3>
         <div class="friend-movies"></div>
         <div>
           <button type="button" class="register__button">등록</button>

@@ -66,8 +66,10 @@ function makeMovieCheckBoxes(movies) {
 }
 
 function makeMovieCheckBox(title) {
-  return `<input type="checkbox" id="movie" class="movie__checkbox">
-  <label for="movie">${title}</label>`;
+  return `<div>
+  <input type="checkbox" id="movie" class="movie__checkbox">
+  <label for="movie">${title}</label>
+  </div>`;
 }
 
 makeMovieCheckBoxes(movies);

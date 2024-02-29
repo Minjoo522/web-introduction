@@ -43,9 +43,15 @@ a {
 }
 
 button {
-  background-color: transparent;
+  background-color: var(--color-accent-variant);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
   outline: 0;
   border: 0;
+  box-shadow: 0 8px 30px rgba(255, 247, 247, 0.12);
 }
 
 button:hover {
@@ -169,6 +175,48 @@ th {
 }
 
 /* 방명록 */
+.visitor-book__section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4rem;
+}
+
+.visitor-book__title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.visitor-book__form {
+  text-align: center;
+  width: 200px;
+  font-size: 1.2rem;
+}
+
+.visitor-book-name {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.friend-name {
+  color: var(--color-primary);
+  padding: 3px;
+  background-color: var(--color-text);
+  border: var(--color-accent) 1.5px solid;
+  border-radius: 5px;
+}
+
+.friend-movies {
+  text-align: left;
+  margin-bottom: 1rem;
+}
+
+.movie__checkbox {
+  margin: 0.5rem 0rem;
+}
+
 .movie__checkbox:hover {
   cursor: pointer;
 }
