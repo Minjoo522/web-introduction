@@ -135,6 +135,7 @@ th {
 
 .my-movies__table {
   margin: 2rem;
+  border-radius: 20px;
 }
 
 .movie-poster__table {
